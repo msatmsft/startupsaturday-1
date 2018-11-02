@@ -17,6 +17,7 @@ namespace startupsaturday.Controllers
         [HttpGet("[action]")]
         public IEnumerable<WeatherForecast> WeatherForecasts()
         {
+            System.Diagnostics.Debug.WriteLine("executing weather forecasts method now");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
